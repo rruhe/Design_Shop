@@ -1,0 +1,111 @@
+/* #############################
+   Global settings
+################################ */
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800;&display=swap');
+
+/* font-family: 'Karla', sans-serif; */
+/* Farbe: #323A45 / #848484 */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-family: 'Karla', sans-serif;
+   font-size: 16px;
+   color: #323A45;
+   /* color: #848484; */
+}
+
+body {
+   width: 90%;
+   margin: 0 auto;
+}
+
+/* #############################
+   Global settings
+################################ */
+/* header with logo and nav */
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+nav ul {
+   display: flex;
+   list-style-type: none;
+}
+
+nav li {
+   padding: 2vw;
+}
+
+/* logo as text */
+nav p {
+   font-size: 1.5rem;
+   font-weight: 800;
+}
+
+nav a {
+   text-decoration: none;
+   font-weight: 700;
+   color: #323A45;
+}
+
+/* #############################
+   Main 
+################################ */
+
+/* main {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto;
+   gap: 5px;
+} */
+
+.container-oneCol {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
+   gap: 15px;
+}
+
+.container-threeCol {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto;
+   gap: 15px;
+}
+
+article {
+   width: 100%;
+   height: 100%;
+   font-size: 0.9rem;
+}
+
+.article-image {
+   /* height: 100%; */
+   width: 100%;
+}
+
+.article-flex-div {
+   margin: 1vh 0;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 600;
+}
+
+.article-flex-div .article-txt p:last-child {
+   color: #848484;
+   font-weight: 300;
+   line-height: 2;
+}
+
+
+
