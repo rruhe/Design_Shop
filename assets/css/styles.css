@@ -35,28 +35,31 @@ header {
    margin-bottom: 5vh;
 }
 
-nav {
+header nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
 
-nav ul {
+header nav ul {
    display: flex;
    list-style-type: none;
 }
 
-nav li {
+header nav li {
    padding: 2vh 0 2vh 5vw;
 }
 
 .burger-Menu {
    display: none;
-   font-size: 3rem;
+   font-size: 2rem;
+   border: 1px solid #000;
+   border-radius: 4px;
+   padding: 0rem 0.8rem 0.2rem 0.75rem;
 }
 
 /* logo as text */
-nav p {
+header nav p {
    font-size: 1.5rem;
    font-weight: 800;
 }
@@ -66,6 +69,87 @@ a {
    font-weight: 700;
    color: #323A45;
 }
+
+/* Navigation for small Devices in Main*/
+#vertical-nav {
+   margin-bottom: 5vh;
+   background-color: rgba(169, 169, 169, 0.2);
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   text-align: end;
+}
+
+#vertical-nav ul {
+   list-style-type: none;
+}
+
+#vertical-nav li {
+   padding: 5vh 5vw;
+}
+
+#vertical-nav li:hover {
+   background-color: white;
+}
+/* END Navigation for small Devices in Main*/
+
+/* css for first hidden Contact form */
+#contact-form-rr {
+   width: 100%;
+   margin: 10vh 0vw;
+   border: 2px solid black;
+   background-color: gainsboro;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contact-header {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+   background-color:grey;
+   padding: 0 1rem;
+}
+
+#contact-form-rr p {
+   font-size: 1.3rem;
+   padding: 3vh 0vw;
+   color: #fff;
+}
+
+#header-close {
+   font-size: 2rem;
+   color: #fff;
+   padding: 1rem;
+   display: block;
+}
+
+#contact-form-rr .inp-txt {
+   border: 1px gray solid;
+   width: 100%;
+   display: block;
+   font-size: 1rem;
+   margin: 3vh 0vw;
+   padding: 1vh 1vw;
+   background-color: #fff;
+}
+   
+#contact-form-rr .btn-sub {
+   font-size: 2rem;
+   padding: 2vh 0vw;
+   width: 90%;
+   border: none;
+   color: #fff;
+   background-color: red;
+   margin: 0 5% 3vh 5%;
+}
+
+#contact-form-rr .btn-sub:focus {
+   background-color: rgb(129, 8, 8);
+}
+
+#contact-form-rr textarea {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* css for first hidden Contact form */
+
 
 /* #############################
    Main 
@@ -146,7 +230,7 @@ footer p {
    @media queries 
 ################################ */
 
-@media (max-width: 920px) {
+@media (max-width: 940px) {
    .container-threeCol {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -165,12 +249,12 @@ footer p {
    }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 800px) {
    .burger-Menu {
       display: block;
    }
 
-   nav ul {
+   header nav ul {
       display: none;
    }
 }

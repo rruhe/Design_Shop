@@ -9,20 +9,44 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body onresize="displayNoneSpecial()">
     <header>
         <nav>
             <p>THE DESIGN SHOP</p>
             <ul>
                 <li><a href="#">Weekly Redommendations</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="contact-link" onclick="showContactForm()">Contact</a></li>
                 <li><a href="#">T D B</a></li>
             </ul>
-            <a href="#" class="burger-Menu" onclick="showSmallMenu()">≡</a>
+            <a href="#" class="burger-Menu" onclick="showVerticalMenu()">☰</a>
         </nav>
     </header>
 
     <main>
+        <!-- Vertical Menu -> hidden see main.js showVerticalMenu() -->
+        <nav id="vertical-nav" style="display: none;">
+            <ul>
+                <li><a href="#">Weekly Redommendations</a></li>
+                <li><a href="#" class="contact-link" onclick="showContactForm()">Contact</a></li>
+                <li><a href="#">T D B</a></li>
+            </ul>
+        </nav>
+        <!-- Contact form - first hidden -->
+        <div id="contact-form-rr" style="display: none;">
+            <div class="contact-header">
+                <p>Contact Us</p>
+                <span id="header-close" onclick="showContactForm()">☓</span>
+            </div>
+            <div>
+                <input type="text" name="name" id="" placeholder="Your Name" class="inp-txt">
+                <input type="email" name="email" id="" placeholder="Email Address" class="inp-txt">
+                <textarea name="message" id="" cols="26" rows="3" placeholder="Type your Message"
+                    class="inp-txt"></textarea>
+                <input type="submit" value="Send" class="btn-sub">
+            </div>
+        </div>
+
+
         <!-- No1 Grid One Column -->
         <div class="container-oneCol">
             <article>
@@ -614,7 +638,7 @@
         <footer>
             <div class="container-footer">
                 <div>
-                    <p class="footer-header-p">The Design Shop</p>                    
+                    <p class="footer-header-p">The Design Shop</p>
                     <p>Carefully curated online design store,</p>
                     <p>founded and designed by<a href=""> Ruby Bacanovic.</a></p>
                 </div>
@@ -631,7 +655,7 @@
                     </div>
                 </div>
                 <div class="footer-right">
-                    <p class="footer-header-p">Find US Here</p>                    
+                    <p class="footer-header-p">Find US Here</p>
                     <p> <a href="#">Fackbook</a></p>
                     <p> <a href="#">Instagram</a></p>
                     <p> <a href="#">Twitter</a></p>
@@ -640,6 +664,7 @@
             <p>© 2019 The Design Shop <strong>&bull;</strong> The Design Blog</p>
         </footer>
     </main>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
