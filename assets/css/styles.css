@@ -3,7 +3,7 @@
 ################################ */
 
 /* imports */
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;500;600;700;800;&display=swap');
 
 /* font-family: 'Karla', sans-serif; */
 /* Farbe: #323A45 / #848484 */
@@ -31,6 +31,10 @@ body {
 ################################ */
 /* header with logo and nav */
 
+header {
+   margin-bottom: 5vh;
+}
+
 nav {
    display: flex;
    justify-content: space-between;
@@ -43,7 +47,12 @@ nav ul {
 }
 
 nav li {
-   padding: 2vw;
+   padding: 2vh 0 2vh 5vw;
+}
+
+.burger-Menu {
+   display: none;
+   font-size: 3rem;
 }
 
 /* logo as text */
@@ -52,7 +61,7 @@ nav p {
    font-weight: 800;
 }
 
-nav a {
+a {
    text-decoration: none;
    font-weight: 700;
    color: #323A45;
@@ -62,25 +71,20 @@ nav a {
    Main 
 ################################ */
 
-/* main {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: auto;
-   gap: 5px;
-} */
-
 .container-oneCol {
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: auto;
-   gap: 15px;
+   grid-gap: 1rem;
+   margin-bottom: 3vh;
 }
 
 .container-threeCol {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: auto;
-   gap: 15px;
+   grid-gap: 1rem;
+   margin-bottom: 3vh
 }
 
 article {
@@ -90,7 +94,6 @@ article {
 }
 
 .article-image {
-   /* height: 100%; */
    width: 100%;
 }
 
@@ -107,5 +110,88 @@ article {
    line-height: 2;
 }
 
+/* #############################
+   Footer 
+################################ */
 
+.container-footer {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto;
+   gap: 15px;
+   margin-bottom: 5vh;
+}
+
+.footer-middle {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer-right {
+   display: flex;
+   justify-self: center;
+   flex-direction: column;
+}
+
+.footer-header-p {
+   font-weight: 600;
+   margin: 5vh 0 3vh 0;
+}
+
+footer p {
+   line-height: 2;
+}
+
+/* #############################
+   @media queries 
+################################ */
+
+@media (max-width: 920px) {
+   .container-threeCol {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 1rem;
+      margin-bottom: 3vh
+   }
+
+   .container-footer {
+      display: block;
+      margin-bottom: 5vh;
+   }
+
+   .footer-middle {
+      display: block;
+   }
+}
+
+@media (max-width: 760px) {
+   .burger-Menu {
+      display: block;
+   }
+
+   nav ul {
+      display: none;
+   }
+}
+
+@media (max-width: 600px) {
+   .container-threeCol {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      grid-gap: 1rem;
+      margin-bottom: 3vh
+   }
+
+   .container-footer {
+      display: block;
+      margin-bottom: 5vh;
+   }
+
+   .footer-middle {
+      display: block;
+   }
+
+}
 
