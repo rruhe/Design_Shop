@@ -18,7 +18,6 @@ html {
    font-family: 'Karla', sans-serif;
    font-size: 16px;
    color: #323A45;
-   /* color: #848484; */
 }
 
 body {
@@ -26,8 +25,14 @@ body {
    margin: 0 auto;
 }
 
+a {
+   text-decoration: none;
+   font-weight: 700;
+   color: #323A45;
+}
+
 /* #############################
-   Global settings
+   Content settings
 ################################ */
 /* header with logo and nav */
 
@@ -64,17 +69,15 @@ header nav p {
    font-weight: 800;
 }
 
-a {
-   text-decoration: none;
-   font-weight: 700;
-   color: #323A45;
-}
+/* #############################
+   Main 
+################################ */
 
 /* Navigation for small Devices in Main*/
 #vertical-nav {
    margin-bottom: 5vh;
    background-color: rgba(169, 169, 169, 0.2);
-   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
    text-align: end;
 }
 
@@ -91,13 +94,15 @@ a {
 }
 /* END Navigation for small Devices in Main*/
 
-/* css for first hidden Contact form */
+/* ===================================== */
+/* css for first hidden Contact form  */
+/* ===================================== */
 #contact-form-rr {
-   width: 100%;
-   margin: 10vh 0vw;
+   width: 50%;
+   margin: 10vh auto;
    border: 2px solid black;
    background-color: gainsboro;
-   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .contact-header {
@@ -118,15 +123,18 @@ a {
    font-size: 2rem;
    color: #fff;
    padding: 1rem;
-   display: block;
+}
+
+#header-close:hover {
+   background-color:darkgray;
 }
 
 #contact-form-rr .inp-txt {
    border: 1px gray solid;
-   width: 100%;
+   width: 90%;
    display: block;
    font-size: 1rem;
-   margin: 3vh 0vw;
+   margin: 3vh auto;
    padding: 1vh 1vw;
    background-color: #fff;
 }
@@ -144,17 +152,12 @@ a {
 #contact-form-rr .btn-sub:focus {
    background-color: rgb(129, 8, 8);
 }
-
-#contact-form-rr textarea {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
 /* css for first hidden Contact form */
 
 
-/* #############################
-   Main 
-################################ */
-
+/* ===================================== */
+/* Gallery of Articles                   */
+/* ===================================== */
 .container-oneCol {
    display: grid;
    grid-template-columns: 1fr;
@@ -179,6 +182,12 @@ article {
 
 .article-image {
    width: 100%;
+   transition: all 0.5s;
+   display: block;
+}
+
+.article-image:hover {
+   opacity: 0.3;
 }
 
 .article-flex-div {
@@ -257,6 +266,10 @@ footer p {
    header nav ul {
       display: none;
    }
+
+   #contact-form-rr {
+      width: 80%;
+   }
 }
 
 @media (max-width: 600px) {
@@ -275,6 +288,10 @@ footer p {
 
    .footer-middle {
       display: block;
+   }
+
+   #contact-form-rr {
+      width: 100%;
    }
 
 }

@@ -17,7 +17,7 @@ function showContactForm() {
     if (contactForm.style.display === "none") {
         contactForm.style.display = "block";
         for (let i = 0; i < cLink1.length; i++) {
-            cLink1[i].innerHTML = "CLOSE CONTACT FORM";
+            cLink1[i].innerHTML = "CONTACT";
             cLink1[i].style.color = "red";
             cLink1[i].style.borderBottom = "1px solid red";
         }
@@ -31,7 +31,7 @@ function showContactForm() {
     }  
 }
 
-// vertical-navigation to display none when rezising the Body
+// vertical-navigation to display > none when rezising the Body
 function displayNoneSpecial() {
     document.getElementById("vertical-nav").style.display = "none";
     document.getElementsByClassName("burger-Menu")[0].innerHTML = "☰";
